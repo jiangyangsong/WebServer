@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+
+    body{
+      background-color: #f6f6f6;
+      font-family: Microsoft YaHei UI, Microsoft JhengHei, STHeiti, serif;
+    }
+
+    .box{
+      width: 400px; /* 宽度 */
+      margin: 50px auto; /* 居中 */
+    }
+    .box h1{
+      text-align: center; /* h1文字居中 */
+      font-weight: normal; /* 消除粗体 */
+      margin-bottom: 5px; /* 消除下边距 */
+    }
+
+    .panel{
+      background-color: #fff;
+      padding: 10px 25px;
+    }
+    .panel h2{
+      text-align: center;  /* 文字居中 */
+      font-weight: normal; /* 消除粗体 */
+      font-size: 1em;    /* 设置字号，为标准字号的1.2倍 */
+      margin: 0;           /* 消除外边距 */
+      padding: 25px 0 10px;/* s设置内边距，上大，下小，左右0 */
+    }
+    .form-field input{
+      width: 326px; /* 400-20-20-8-8-2-2 = 340 */
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #dbdbdb;
+      font-size: 1em;
+    }
+    .form-field input:focus{
+      border:1px solid deepskyblue;
+      outline: deepskyblue; /* Chrome内嵌属性 */
+    }
+    .button input{
+      width: 350px; /* 400-20-20 = 360 */
+      padding: 8px;
+      color: white;
+      font-size: 1em;
+      font-weight: bold;
+      background-color: dodgerblue;
+      border-radius: 4px;
+      border: 1px solid dodgerblue;
+      cursor: pointer;
+    }
+    .form-field{
+      margin-bottom: 15px; /* 输入项目纵向间距 */
+    }
+    .button{
+      margin-bottom: 15px;
+    }
+    .button input:hover{
+      background-color: #1d50e1;
+    }
+    .button input:active{
+      background-color: dodgerblue;
+      border: 2px solid #20c3ff;
+      outline: #20c3ff;
+    }
+    .text{
+      margin-bottom: 15px;
+    }
+    .text a{
+      color: dodgerblue;
+    }
+    .text a:hover{
+      color: #1740b4;
+      text-decoration: underline; /* 下划线 */
+      cursor: pointer;
+    }
+    .text a{
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <h1>PlayStation®登录</h1>
+  <div class="panel">
+    <h2>Login</h2>
+    <form action="./loginUser" method="POST">
+      <div class="form-field">
+        <input type="text" placeholder="手机号/邮箱/用户名" name="username">
+      </div>
+      <div class="form-field">
+        <input type="password" placeholder="密码" name="password">
+      </div>
+      <div class="button">
+        <input type="submit" value="登录">
+      </div>
+    </form>
+    <div class="text">
+      <a>忘记密码?</a>
+    </div>
+    <div class="text">
+      <a href="reg.html">新用户注册</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

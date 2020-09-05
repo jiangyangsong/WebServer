@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+<meta charset="UTF-8">
+<title>PlayStation™Store官方網站</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css"/>
+  <style>
+    header{
+      background-color: black;
+      color: white;
+      font-family: "微软雅黑", "黑体", "文泉驿正黑";
+    }
+    body{
+      overflow-x: hidden;
+    }
+    /*设置logo边距对齐导航*/
+    .navbar-brand{
+      padding: 6px;
+    }
+    /*修改输入框大小*/
+    #input_keyword{
+      width: 100px;
+    }
+    /*修改My PlayStation样式*/
+    #myps{
+      color: #959595;
+      font-weight: bold;
+    }
+    #myps:hover{
+      color: #686868;
+      text-decoration: none;
+    }
+    .title{
+      padding-top: 50px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .store{
+      padding: 38px 0 0 80px;
+
+    }
+    .store-text{
+      padding-top: 55px;
+    }
+    img{
+      cursor: pointer;
+    }
+    .shopping{
+      padding-right: 80px;
+    }
+    .left-nav{
+      padding-left: 80px;
+    }
+    .right-nav{
+      padding-right: 80px;
+    }
+    section{
+      background-color: rgba(17, 32, 64, 0.98);
+      padding-bottom: 30px;
+
+    }
+    h1{
+      color: white;
+    }
+    .mid{
+     background-color: rgba(3, 22, 62, 0.91);
+    }
+    .bk{
+      background-color: #020e29;
+    }
+    .list-group-item{
+      background-color: #020e29;
+    }
+    .rota{
+      padding-top: 25px;
+    }
+    .atc{
+      padding-top: 25px;
+    }
+    .row1{
+      /*添加省略号样式*/
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      /*设置显示的行数*/
+      -webkit-line-clamp:1;
+      overflow: hidden;
+    }
+    .row2{
+      /*添加省略号样式*/
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      /*设置显示的行数*/
+      -webkit-line-clamp:2;
+      overflow: hidden;
+    }
+    .page-header{
+      color: white;
+    }
+    section span{
+      cursor: pointer;
+    }
+    .atc img{
+      transition-duration: 0.2s;/*设置动画时间*/
+    }
+    .atc img:hover{
+      transform: scale(1.1);/*鼠标悬停在图片上缩放1.2倍*/
+    }
+    footer{
+      background-color: black;
+    }
+    .ver{
+      text-align: center;
+    }
+    footer p{
+      color: white;
+      font-weight: bold;
+    }
+    footer p a{
+      color: #bbbbbb;
+      transition-duration: 0.1s;/*设置动画时间*/
+    }
+    footer p a:hover{
+      text-decoration: none;
+      color: #e9e9e9;
+    }
+    .squ{
+      width: 280px;
+      height: 300px;
+      background-color: #333333;
+      padding: 20px 0 0 20px;
+      font-size: 1.2em;
+    }
+    .squ a{
+      color: white;
+    }
+    .squ span a{
+      width: 40px;
+      height: 40px;
+      color: white;
+      line-height: 40px;
+      text-align: center;
+      margin: 20px 5px 0 0;
+      text-decoration: none;
+    }
+    .fb{
+      background-color: #3b5a98;
+    }
+    .fb:hover{
+      background-color: #292929;
+      transition-duration: 0.3s;/*设置动画时间*/
+    }
+    .yt{
+      background-color: #ef3c39;
+    }
+    .yt:hover{
+      background-color: #292929;
+      transition-duration: 0.3s;/*设置动画时间*/
+    }
+    .wb{
+      background-color: #d72930;
+    }
+    .wb:hover{
+      background-color: #292929;
+      transition-duration: 0.3s;/*设置动画时间*/
+    }
+    .ig{
+      background-color: #ed7900;
+    }
+    .ig:hover{
+      background-color: #292929;
+      transition-duration: 0.3s;/*设置动画时间*/
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container-fluid">
+      <h4 class="text-right"><b>SONY 索尼(中國香港)</b></h4>
+    </div>
+  </header>
+  <!--导航区域-->
+  <nav>
+    <div class="row">
+      <div class="col-lg-6 left-nav">
+        <ul class="nav navbar-nav">
+          <li class="navbar-brand"><img src="logo.jpg" width="35px"></li>
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              游戏 <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">PS4</a></li>
+              <li><a href="#">PS VR</a></li>
+              <li><a href="#">PS Plus</a></li>
+              <li><a href="#">购买游戏</a></li>
+              <li><a href="#">PS Vista游戏</a></li>
+            </ul>
+          </li>
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              硬件 <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">PS4</a></li>
+              <li><a href="#">PS4 Pro</a></li>
+              <li><a href="#">PS VR</a></li>
+              <li><a href="#">周边设备</a></li>
+            </ul>
+          </li>
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              服务 <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">PS Plus</a></li>
+              <li><a href="#">PS Music</a></li>
+            </ul>
+          </li>
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              购物 <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">PS Store</a></li>
+              <li><a href="#">PS4 游戏</a></li>
+              <li><a href="#">PlayStation Plus</a></li>
+              <li><a href="#">特价优惠</a></li>
+              <li><a href="#">销售点</a></li>
+            </ul>
+          </li>
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              支援 <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">辅助和支援</a></li>
+              <li><a href="#">PSN状态</a></li>
+              <li><a href="#">保修服务</a></li>
+              <li><a href="#">修复与连接</a></li>
+              <li><a href="#">系统更新</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6 right-nav">
+        <ul class="nav navbar-nav navbar-right">
+          <li><p class="navbar-text"><a href="#" id="myps">My PlayStation</a></p></li>
+          <li><a href="#"><span class="fa fa-group"></span></a></li>
+          <li><a href="#"><span class="fa fa-comment"></span></a></li>
+          <li><a href="#"><span class="fa fa-envelope"></span></a></li>
+          <li><a href="#">登出</a></li>
+          <li>
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search" id="input_keyword">
+              </div>
+              <button type="submit" class="btn btn-default">
+                <span class="fa fa-search"></span></button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-1 store">
+        <img src="https://store.playstation.com/img/ps-store-bag.svg" width="35px">
+      </div>
+      <div class="col-lg-3 store-text">
+        <img src="https://store.playstation.com/img/ps-store-text.svg" width="170px">
+      </div>
+
+      <div class="col-lg-6 title">
+        <ul class="nav nav-pills">
+          <li role="presentation"><a href="#">游戏</a></li>
+          <li role="presentation"><a href="#">PlayStation®Plus</a></li>
+          <li role="presentation"><a href="#">限时优惠</a></li>
+          <li role="presentation"><a href="#">追加内容</a></li>
+          <li role="presentation"><a href="#">预购</a></li>
+          <li role="presentation"><a href="#">专属推荐</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 shopping">
+        <ul class="nav nav-pills title navbar-right">
+          <li role="presentation"><a href="#">
+            <span class="fa fa-heart-o"></span></a></li>
+          <li role="presentation"><a href="#">
+            <span class="fa fa-shopping-cart"></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h1 class="page-header">游戏</h1>
+          <div class="container-fluid">
+            <div class="row mid">
+              <div class="col-md-2 bk">
+                <h4 class="page-header">推介内容</h4>
+                <div class="list-group">
+                  <a href="#" class="list-group-item">限时优惠</a>
+                  <a href="#" class="list-group-item">预购</a>
+                  <a href="#" class="list-group-item">PlayStation®Plus</a>
+                  <a href="#" class="list-group-item">PlayStation®VR</a>
+                </div>
+                <h4 class="page-header">游戏</h4>
+                <div class="list-group">
+                  <a href="#" class="list-group-item">限时优惠</a>
+                  <a href="#" class="list-group-item">热门多人线上游戏</a>
+                  <a href="#" class="list-group-item">基本免费游戏</a>
+                  <a href="#" class="list-group-item">试玩版及Beta测试游戏</a>
+                  <a href="#" class="list-group-item">PlayStation®Indies</a>
+                </div>
+                <h4 class="page-header">追加内容</h4>
+                <div class="list-group">
+                  <a href="#" class="list-group-item">最受欢迎的追加内容</a>
+                  <a href="#" class="list-group-item">基本免费游戏追加内容</a>
+                  <a href="#" class="list-group-item">主题</a>
+                  <a href="#" class="list-group-item">个人造型</a>
+                  <a href="#" class="list-group-item">游戏原声带</a>
+                </div>
+                <h4 class="page-header">应用程序</h4>
+                <div class="list-group">
+                  <a href="#" class="list-group-item">应用程序</a>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="container-fluid rota">
+                  <!--轮播图-->
+                  <div id="myCarousel" class="carousel slide">
+                    <!-- 轮播（Carousel）指标 -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                      <li data-target="#myCarousel" data-slide-to="2"></li>
+                      <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
+                    <!-- 轮播（Carousel）项目 -->
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img src="https://homer.dl.playstation.net/pr/bam-art/106/347/dbfd0b97-d3a7-4480-8644-65d933317bff.jpg" alt="First slide">
+                      </div>
+                      <div class="item">
+                        <img src="https://homer.dl.playstation.net/pr/bam-art/105/730/0903c2c8-0c4f-44e7-863e-c29ede8443df.jpg" alt="Second slide">
+                      </div>
+                      <div class="item">
+                        <img src="https://homer.dl.playstation.net/pr/bam-art/106/339/889d35cd-6f93-437e-8d6e-ee61b4318505.png" alt="Third slide">
+                      </div>
+                      <div class="item">
+                        <img src="https://homer.dl.playstation.net/pr/bam-art/106/520/8c52cdcd-5ab4-4e6d-a1c5-7e4e6d5cdcc2.png" alt="Fourth slide">
+                      </div>
+                    </div>
+                    <!-- 轮播（Carousel）导航 -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+
+                </div>
+                <div class="container-fluid atc">
+                  <!--正文-->
+                  <div class="row">
+                    <div class="col-md-5">
+                      <img src="psn1.jpg" width="285px">
+                    </div>
+                    <div class="col-md-5 text-right">
+                      <p><img src="psn2.jpg" width="285px"></p>
+                    </div>
+                    <div class="col-md-2 text-right">
+                      <p><img src="psn3.jpg" width="90px"></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="page-header container-fluid">
+                      <h5>PlayStation®Plus |<a href="#"> 全部查看</a></h5>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="thumbnail">
+                        <img src="atc1.jpg">
+                        <div class="caption">
+                          <div class="page-header">
+                            <a href="#"><small>PlayStation®Plus</small></a>
+                          </div>
+                          <small>定期服務</small>
+                          <a href="#" class="row1">PS3 | PS Vita | PS4</a>
+                          <div class="well well-sm text-center">
+                            <span class="fa fa-shopping-cart"> HK$308.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <div class="thumbnail">
+                        <img src="atc2.jpg">
+                        <div class="caption">
+                          <div class="page-header">
+                            <a href="#"><small>PlayStation®Plus</small></a>
+                          </div>
+                          <small>定期服務</small>
+                          <a href="#" class="row1">PS3 | PS Vita | PS4</a>
+                          <div class="well well-sm text-center">
+                            <span class="fa fa-shopping-cart"> HK$128.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <div class="thumbnail">
+                        <img src="atc3.jpg">
+                        <div class="caption">
+                          <div class="page-header">
+                            <a href="#"><small>PlayStation®Plus</small></a>
+                          </div>
+                          <small>定期服務</small>
+                          <a href="#" class="row1">PS3 | PS Vita | PS4</a>
+                          <div class="well well-sm text-center">
+                            <span class="fa fa-shopping-cart"> HK$48.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <div class="thumbnail">
+                        <img src="psn3.jpg">
+                        <div class="caption">
+                          <div class="page-header">
+                            <a href="#" class="row2"><small>PlayStation®Plus十週年紀念主題 (主題)</small></a>
+                          </div>
+                          <small>静态主题</small>
+                          <a href="#">PS4</a>
+                          <div class="well well-sm text-center">
+                            <span class="fa fa-shopping-cart"> 免费</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="page-header container-fluid">
+                      <h5>最新游戏 |<a href="#"> 全部查看</a></h5>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="thumbnail">
+                        <img src="game1.jpg">
+                        <div class="caption">
+                          <div class="page-header">
+                            <a href="#" class="row2"><small>Arcade Archives CIRCUS CHARLIE (日文, 英文)</small></a>
+                          </div>
+                          <small>制品版游戏</small>
+                          <a href="#">PS4</a>
+                          <div class="well well-sm text-center">
+                            <span class="fa fa-shopping-cart"> HK$62.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <div class="thumbnail">
+                        <img src="game2.jpg">
+                        <div class="caption">
+                          <div class="page-header">
+                            <a href="#" class="row2"><small>《漫威復仇者聯盟》BETA封測 (韓文, 繁體中文, 英文, 簡體中文)</small></a>
+                          </div>
+                          <small>制品版游戏</small>
+                          <a href="#">PS4</a>
+                          <div class="well well-sm text-center">
+                            <span style="color: rgba(1,51,154,0.95)">无法购买</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <div class="thumbnail">
+                        <img src="game3.jpg">
+                        <div class="caption">
+                          <div class="page-header">
+                            <a href="#" class="row2"><small>怪物男孩與被詛咒的王國 (中日英韓文版)</small></a>
+                          </div>
+                          <small>制品版游戏</small>
+                          <a href="#">PS4</a>
+                          <div class="well well-sm text-center">
+                            <span class="fa fa-shopping-cart"> HK$319.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <div class="thumbnail">
+                        <img src="game4.jpg">
+                        <div class="caption">
+                          <div class="page-header">
+                            <a href="#" class="row2"><small>方根膠捲 (韓文, 繁體中文,英文, 簡體中文)</small></a>
+                          </div>
+                          <small>制品版游戏</small>
+                          <a href="#">PS4</a>
+                          <div class="well well-sm text-center">
+                            <span class="fa fa-shopping-cart"> HK$468.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="page-header container-fluid">
+                      <h5>最新追加内容 |<a href="#"> 全部查看</a></h5>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="thumbnail">
+                        <img src="game5.jpg">
+                        <div class="caption">
+                          <div class="page-header">
+                            <a href="#" class="row2"><small>PES 2019: PlayStation®Plus Member Bonus August (中日英韓文版)</small></a>
+                          </div>
+                          <small>道具</small>
+                          <a href="#" class="row1">PS4</a>
+                          <div class="well well-sm text-center">
+                            <span style="color: #ffbb07">PSN免费</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <div class="thumbnail">
+                        <img src="game6.jpg">
+                        <div class="caption">
+                          <div class="page-header">
+                            <a href="#" class="row2"><small>RESIDENT EVIL 3 遊戲獎勵全解鎖 (中日英韓文版)</small></a>
+                          </div>
+                          <small>追加内容</small>
+                          <a href="#" class="row2">PS4</a>
+                          <div class="well well-sm text-center">
+                            <span class="fa fa-shopping-cart"> HK$39.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <div class="thumbnail">
+                        <img src="game7.jpg">
+                        <div class="caption">
+                          <div class="page-header">
+                            <a href="#" class="row2"><small>RESIDENT EVIL RESISTANCE - 女性角色專用服裝「克蕾兒·雷德菲爾」 (中日英韓文版)</small></a>
+                          </div>
+                          <small>服装</small>
+                          <a href="#" class="row1">PS4</a>
+                          <div class="well well-sm text-center">
+                            <span class="fa fa-shopping-cart"> HK$23.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <div class="thumbnail">
+                        <img src="game8.jpg">
+                        <div class="caption">
+                          <div class="page-header">
+                            <a href="#" class="row2"><small>RESIDENT EVIL RESISTANCE - 生存者專用服裝包：「里昂·S·甘迺迪」與「克蕾兒·雷德菲爾」 (追加內容)</small></a>
+                          </div>
+                          <small>静态主题</small>
+                          <a href="#" class="row1">PS4</a>
+                          <div class="well well-sm text-center">
+                            <span class="fa fa-shopping-cart"> HK$39.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 bk text-center">
+                <h4 class="page-header">最新资讯</h4>
+                <div class="list-group">
+                  <a href="#" class="list-group-item">《创之轨迹》中文数位豪华版及季票信息公开</a>
+                  <a href="#" class="list-group-item">《妖精的尾巴》可玩要素与收集-角色入队条件</a>
+                  <a href="#" class="list-group-item">《看门狗：军团》支持四人联机  NPC还有日程表</a>
+                  <a href="#" class="list-group-item">《最终幻想7：重制版》限时优惠活动正式开启</a>
+                  <a href="#" class="list-group-item">《对马岛之魂》今日优化更新  强化行者服装能力</a>
+                </div>
+                <p><img src="tenth.jpg"></p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div>
+      <p class="ver"><i><b>Version</b> 1.0</i></p>
+    </div>
+    <div class="container-fluid">
+      <div class="col-md-2 col-md-offset-2">
+        <p class="page-header">服務</p>
+        <p><a href="#">PlayStation Store</a></p>
+        <p><a href="#">Playstation Plus</a></p>
+      </div>
+      <div class="col-md-2">
+        <p class="page-header">賬戶</p>
+        <p><a href="#">賬戶管理</a></p>
+        <p><a href="#">客戶支援</a></p>
+      </div>
+      <div class="col-md-2">
+        <p class="page-header">法律</p>
+        <p><a href="#">服務條款及使用協議</a></p>
+        <p><a href="#">開放原始碼軟體授權合約</a></p>
+        <p><a href="#">個人私隱政策</a></p>
+        <p><a href="#">健康警告</a></p>
+        <p><a href="#">關於我們</a></p>
+        <p><a href="#">更多……</a></p>
+      </div>
+      <div class="col-md-3 right">
+        <div class="squ">
+          <p>PlayStation Network</p>
+          <p><a href="#"><small>Support</small></a></p>
+          <span>
+            <a href="#" class="fa fa-facebook fb" title="facebook"></a>
+            <a href="#" class="fa fa-youtube yt" title="youtube"></a>
+            <a href="#" class="fa fa-weibo wb" title="sina"></a>
+            <a href="#" class="fa fa-instagram ig" title="instagram"></a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+</body>
+<script type="text/javascript" src="../bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/respond.min.js"></script>
+<script>
+  /*设置轮播间隔*/
+  $('#myCarousel').carousel({
+    interval: 3000
+  });
+  /*让轮播图开始移动*/
+  $('#myCarousel').carousel('cycle');
+
+</script>
+</html>

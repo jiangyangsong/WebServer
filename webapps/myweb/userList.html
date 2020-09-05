@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>用户列表</title>
+  <style>
+    .box{
+      width: 400px;
+      margin: 80px auto;
+    }
+    .box h1{
+      text-align: center; /* h1文字居中 */
+      font-weight: normal; /* 消除粗体 */
+      margin-bottom: 50px; /* 消除下边距 */
+    }
+    th{
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>用户列表</h1>
+    <table border="1" width="400" cellpadding="5">
+      <tr align="center">
+        <th>用户名</th>
+        <th>密码</th>
+        <th>昵称</th>
+        <th>年龄</th>
+      </tr>
+      <tr align="center" th:each="user : ${users}">
+        <td th:text="${user.username}">张三</td>
+        <td th:text="${user.password}">123456</td>
+        <td th:text="${user.nickname}">阿三</td>
+        <td th:text="${user.age}">25</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
